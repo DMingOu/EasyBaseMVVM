@@ -12,6 +12,7 @@ import java.util.List;
  * description: Banner Model层
  * author: ODM
  * date: 2019/10/26
+ * @author ODM
  */
 public class BannerRepository extends BaseModel {
 

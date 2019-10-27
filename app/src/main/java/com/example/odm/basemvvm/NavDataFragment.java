@@ -10,9 +10,13 @@ import com.example.odm.basemvvm.utils.LogUtils;
 import java.util.List;
 
 /**
+ * 演示Fragment继承BaseFragment
+ * 无需重写OnCreateView方法
+ *
  * description: 导航数据Fragment
  * author: ODM
  * date: 2019/10/26
+ * @author ODM
  */
 public class NavDataFragment extends BaseFragment<NavDataViewModel , FragmentNavDataBinding> {
 

@@ -11,6 +11,12 @@ import com.example.odm.basemvvm.utils.LogUtils;
 
 import java.util.List;
 
+/**
+ * 演示Activity,继承BaseActivity
+ * 无需重写onCreate方法
+ *
+ * @author ODM
+ */
 public class BannerActivity extends BaseActivity<BannerViewModel , ActivityBannerBinding> implements View.OnClickListener {
 
 
@@ -25,7 +31,7 @@ public class BannerActivity extends BaseActivity<BannerViewModel , ActivityBanne
     }
 
 
-
+    @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_banner:
