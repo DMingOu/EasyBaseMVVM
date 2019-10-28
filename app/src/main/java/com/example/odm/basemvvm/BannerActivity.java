@@ -35,7 +35,7 @@ public class BannerActivity extends BaseActivity<BannerViewModel , ActivityBanne
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_banner:
-                mViewModel.getBanner().observe(this, resource -> resource.handler(new OnCallback<List<BannerBean>>() {
+                mViewModel.getBanner().observe(this, resource -> resource.resourceStateHandle(new OnCallback<List<BannerBean>>() {
                     @Override
                     public void onSuccess(List<BannerBean> data) {
                         System.out.println(data.get(0).getTitle());

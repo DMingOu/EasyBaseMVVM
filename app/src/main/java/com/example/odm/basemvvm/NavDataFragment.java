@@ -29,7 +29,7 @@ public class NavDataFragment extends BaseFragment<NavDataViewModel , FragmentNav
     protected void init() {
         binding.buttonNav.setOnClickListener(v -> {
             LogUtils.e("点击了按钮获取导航数据");
-            mViewModel.getNavData().observe(this , listResourceState -> listResourceState.handler(new OnCallback<List<NavDataBean>>() {
+            mViewModel.getNavData().observe(this , listResourceState -> listResourceState.resourceStateHandle(new OnCallback<List<NavDataBean>>() {
                         @Override
                         public void onSuccess(List<NavDataBean> data) {
                             binding.tvNav.setText(data.get(0).getArticles().get(0).getChapterName());

@@ -73,7 +73,7 @@ public class ResourceState<T> {
         return new ResourceState<>(PROGRESS, percent, total);
     }
 
-    public void handler(OnHandleCallback<T> callback) {
+    public void resourceStateHandle(OnResourceStateHandleCallback<T> callback) {
         switch (state) {
             case LOADING:
                 callback.onLoading(errorMsg);
@@ -98,7 +98,12 @@ public class ResourceState<T> {
         }
     }
 
-    public interface OnHandleCallback<T> {
+    /**
+     * 接口负责处理数据的状态
+     * 不同的数据可以自由选择重写哪些方法，如需要Loading可以重写onLoading
+     * @param <T>
+     */
+    public interface OnResourceStateHandleCallback<T> {
         void onLoading(String showMessage);
 
         void onSuccess(T data);

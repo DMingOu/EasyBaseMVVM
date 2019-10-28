@@ -16,8 +16,8 @@
         tools:context = ".NavDataActivity">
 
         <fragment
-             android:name="com.example.odm.basemvvm.NavDataFragment"
              android:id="@+id/frg_Nav"
+             android:name="com.example.odm.basemvvm.NavDataFragment"
              android:layout_width = "match_parent"
              android:layout_height = "match_parent"
         />

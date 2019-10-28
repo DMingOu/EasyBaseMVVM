@@ -35,13 +35,15 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    //放着没有及时回收造成RxJava内存泄漏
+    //防止RxJava的内存泄漏
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
     implementation 'android.arch.lifecycle:extensions:1.1.1'
-    //okhttp、retrofit、rxjava
+    //OkHttp、Retrofit、RxJava
     implementation 'com.squareup.okhttp3:okhttp:4.2.0'
     implementation 'com.squareup.retrofit2:retrofit:2.6.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    //利用RxJava对View的扩展:防N次点击，监听多次点击，表单验证，验证码倒计时
+    implementation 'com.jakewharton.rxbinding:rxbinding:1.0.0'
 }

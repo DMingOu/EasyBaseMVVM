@@ -83,7 +83,7 @@ public abstract class BaseFragment <VM extends BaseViewModel, VDB extends ViewDa
      * View层继承后,根据实际需求来重写下面的方法,注意判断是否需要super
      * @param <T>
      */
-    public abstract class OnCallback<T> implements ResourceState.OnHandleCallback<T> {
+    public abstract class OnCallback<T> implements ResourceState.OnResourceStateHandleCallback<T> {
         @Override
         public void onLoading(String msg) {
 //            if (dialog == null) {
